@@ -14,13 +14,13 @@ pipeline {
 		
 		stage("Prepare Environment") {
 			steps {
-				sh  'chmod +x gradlew'		
+				bat  'chmod +x gradlew'		
 			}
 		}
 		
 		stage("Build Package") {
 			steps {
-				sh './gradlew clean assembleDebug'		
+				bat './gradlew clean assembleDebug'		
 			}
 		}
 		
