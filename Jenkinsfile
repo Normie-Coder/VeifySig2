@@ -7,7 +7,7 @@ pipeline {
 	
 	environment {
         // Reference the global variable or define it here
-        ANDROID_HOME = "${env.ANDROID_HOME}"
+         ANDROID_HOME  = "C:\Users\clifford\AppData\Local\Android\Sdk"
     }
  
 
