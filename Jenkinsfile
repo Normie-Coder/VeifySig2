@@ -1,5 +1,10 @@
 pipeline {
 	agent any
+	
+	environment {
+        // Reference the global variable or define it here
+        ANDROID_HOME = "${env.ANDROID_HOME}"
+    }
  
 
 	stages {
@@ -20,7 +25,7 @@ pipeline {
 		
 		stage("Build Package") {
 			steps {
-				bat './gradlew clean assembleDebug'		
+				bat 'gradlew.bat clean assembleDebug'		
 			}
 		}
 		
