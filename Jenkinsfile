@@ -1,6 +1,10 @@
 pipeline {
 	agent any
 	
+	tools {
+        jdk 'JDK_17' // Must match the name set in Global Tool Configuration
+    }
+	
 	environment {
         // Reference the global variable or define it here
         ANDROID_HOME = "${env.ANDROID_HOME}"
