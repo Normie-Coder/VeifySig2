@@ -17,12 +17,6 @@ pipeline {
 		
 		
 		
-		stage("Prepare Environment") {
-			steps {
-				bat  'chmod +x gradlew'		
-			}
-		}
-		
 		stage("Build Package") {
 			steps {
 				bat 'gradlew.bat clean assembleDebug'		
